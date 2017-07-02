@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="">
+    {% if error_id == 1 or error_id == 2 or error_id == 3 %}
+    <title>Error</title>
+    {% else %}
+    <title>Message</title>
+    {% endif %}
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../static/SA_Label_System/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../static/SA_Label_System/css/assets/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../../static/SA_Label_System/css/signin.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../static/SA_Label_System/js/assets/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        body {
+            background-color: white;
+        }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="container">
+    <div class="jumbotron" align="center">
+
+      {% if error_id == 1 %}
+      <h1 class="form-signin-heading" align="center">Error!</h1>
+      <h2 class="form-signin-heading" align="center">用户名或密码错误!</h2>
+      {% elif error_id == 2 %}
+      <h1 class="form-signin-heading" align="center">Error!</h1>
+      <h2 class="form-signin-heading" align="center">你的账号已被封锁!</h2>
+      {% elif error_id == 3 %}
+      <h1 class="form-signin-heading" align="center">Error!</h1>
+      <h2 class="form-signin-heading" align="center">两次密码输入不一致! 请重新确认后输入!</h2>
+      {% elif error_id == 4 %}
+          <h1 class="form-signin-heading" align="center">提示</h1>
+      <h2 class="form-signin-heading" align="center">您已经安全退出!</h2>
+      {% elif error_id == 5 %}
+          <h1 class="form-signin-heading" align="center">提示</h1>
+      <h2 class="form-signin-heading" align="center">用户名已存在!</h2>
+      {% endif %}
+     <p><a class="btn btn-primary btn-lg" href="{% url 'SA_Label_System:index' %}" role="button">确定</a></p>
+    </div>
+    </div> <!-- /container -->
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../static/SA_Label_System/js/assets/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
