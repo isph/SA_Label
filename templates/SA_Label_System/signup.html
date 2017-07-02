@@ -35,7 +35,7 @@
 
     <div class="container">
       <h1 class="form-signin-heading" align="center">SA Label System</h1>
-      <form class="form-signin" action="{% url 'SA_Label_System:signup_create_user' %}" method="post"><!--{% csrf_token--> %}
+      <form class="form-signin" action="{% url 'SA_Label_System:signup_create_user' %}" method="post"><!--{% csrf_token %}-->
         <h2 class="form-signin-heading">Please sign up</h2>
         <label for="input_email" class="sr-only">Email Address</label>
         <input type="email" name="input_email" class="form-control" placeholder="Email Address" required autofocus>
