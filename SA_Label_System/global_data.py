@@ -1,0 +1,1 @@
+base_image_name = '0.png'
